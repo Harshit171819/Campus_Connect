@@ -24,3 +24,15 @@ Event scheduling requires `Backend/migrations/001_event_dates.sql` to be applied
 - `Design/`: original design references.
 
 Environment files, credentials, virtual environments, and generated caches are excluded from Git.
+
+## Deploy the backend on Render
+
+Use the Python runtime with these settings when deploying from the repository root:
+
+- Root Directory: leave blank.
+- Build Command: `pip install -r requirements.txt`.
+- Start Command: `gunicorn --chdir Backend app:app --bind 0.0.0.0:$PORT`.
+
+Set `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` in Render's environment variables. This service deploys the backend API; the frontend is a separate Node.js service.
+
+If Root Directory is set to `Backend` instead, use `pip install -r requirements.txt` and `gunicorn app:app --bind 0.0.0.0:$PORT`.
