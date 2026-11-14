@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#712ae2", "on-secondary": "#ffffff", "on-secondary-fixed": "#25005a", "on-primary": "#ffffff", "outline": "#777587", "inverse-surface": "#283044", "surface-bright": "#faf8ff", "surface-container": "#eaedff", "inverse-on-surface": "#eef0ff", "on-secondary-fixed-variant": "#5a00c6", "on-primary-fixed": "#0f0069", "on-error-container": "#93000a", "error": "#ba1a1a", "secondary-fixed-dim": "#d2bbff", "surface-container-high": "#e2e7ff", "surface": "#faf8ff", "primary-fixed": "#e2dfff", "tertiary-fixed-dim": "#fbabff", "on-tertiary-fixed": "#36003e", "background": "#faf8ff", "on-surface": "#131b2e", "surface-container-highest": "#dae2fd", "secondary-container": "#8a4cfc", "on-tertiary-fixed-variant": "#7c008e", "on-tertiary-container": "#ffcafe", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "tertiary-container": "#a500bd", "inverse-primary": "#c3c0ff", "on-background": "#131b2e", "tertiary": "#7f0091", "surface-variant": "#dae2fd", "surface-dim": "#d2d9f4", "primary-container": "#4f46e5", "primary-fixed-dim": "#c3c0ff", "secondary-fixed": "#eaddff", "on-primary-fixed-variant": "#3323cc", "tertiary-fixed": "#ffd6fd", "on-surface-variant": "#464555", "error-container": "#ffdad6", "on-secondary-container": "#fffbff", "surface-container-low": "#f2f3ff", "outline-variant": "c7c4d8", "surface-tint": "#4d44e3", "primary": "#3525cd", "on-error": "#ffffff", "on-primary-container": "#dad7ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "space-xl": "2rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "display": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ], "label-sm": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "label-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-mobile": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "display": [ "40px", { "lineHeight": "48px", "fontWeight": "800" } ], "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "display-mobile": [ "30px", { "lineHeight": "38px", "fontWeight": "800" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,23,42,0.04)] z-50 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md w-72 shrink-0"><img alt="Campus Connect Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBQKQVf_kZ2Oz1s096eDBrz5ZixVgJiYWPlModhpxYGLs67UX_zsN2s6_gCYidjac1YA6KJVo8oGw-nf_2r7bpWI2115xrhuYvdLF3BSfxaeEGxuNllunjQCjOUrPzs0qWDRUzHffgHjN3jiGRewBKVuUfi7IYLHklnJ3yY1B4Klc4XDGcZZAWogyfnaRfJrPKmrR7VhrhzKu6tN7R5h6UUonXRjrHqOCgn5j2oO1g"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Campus Connect</span><span class="font-label-sm text-label-sm text-primary font-semibold tracking-wide uppercase">University Portal</span></div></div><div class="flex-1 max-w-xl mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">search</span><input class="w-full h-[42px] pl-10 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md rounded-xl shadow-[0_1px_3px_rgba(15,23,42,0.04)] focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search campus events, venues, organizers..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><div class="bg-surface-container-low p-1 rounded-xl shadow-[0_1px_2px_rgba(15,23,42,0.05)] flex items-center gap-1"><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-[0_2px_4px_rgba(15,23,42,0.06)] transition-all" id="role-btn-organizer" type="button"><span class="material-symbols-outlined text-[16px]">shield_person</span><span>Organizer Mode</span></button><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="role-btn-student" type="button"><span class="material-symbols-outlined text-[16px]">school</span><span>Student Mode</span></button></div><div class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 bg-surface-container rounded-full text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-secondary text-[16px]">event</span><span>Spring 2025 Semester</span></div><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvSsyEqoegmzvvnYfmgy6hb6Lw2cJim3r-yFkKt_RB48oKuQFFUSO5wydTmgEYOiJeyWwnB-Ce1KRPHonPoA6VG_7ZOqon5M2o20lYlTpWD2zN06jIpEgh9GgLzUN_U_fZzl9S01CenN6Z87sWMqaELS3VDbPz5VSGO9kVzQoG-UCdtB6-dp--wcYaETUcpxi_OPvHH_S9aDeCdWaUmy4cPGcv3sZ7fVhxZ2qfbw"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-snug">Maya Lin</span><span class="font-label-sm text-label-sm text-on-surface-variant" id="user-role-subtitle">Campus Club Lead</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(15,23,42,0.04)] z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md px-3"><div class="px-3 pt-1"><p class="font-label-sm text-label-sm uppercase tracking-wider text-outline" id="nav-section-label">Organizer Controls</p></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm" id="organizer-nav"><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="manage-events" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span>Manage Events</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-label-lg text-label-lg bg-secondary text-on-secondary shadow-md hover:bg-secondary-container hover:text-on-secondary transition-all" data-path="create-event" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>+ Create Event</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="participants" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Participants</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics-and-reports" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span>Analytics &amp; Reports</span></a></nav><nav class="hidden flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm" id="student-nav"><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="explore-events" href="#"><span class="material-symbols-outlined text-[20px]">explore</span><span>Explore Events</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-registrations" href="#"><span class="material-symbols-outlined text-[20px]">confirmation_number</span><span>My Registrations</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="campus-calendar" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Campus Calendar</span></a></nav></div><div class="px-4 flex flex-col gap-space-xs"><div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">verified</span><span class="font-label-md text-label-md text-on-surface">Stanford CS Council</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Club Tier Tier-1 Tier Access • Active</p></div><div class="flex items-center justify-between px-1 pt-2 font-label-sm text-label-sm text-outline"><span>Campus Connect v2.4</span><a class="hover:text-primary transition-colors" href="#">Help Center</a></div></div></aside><div class="pl-64"><main class="relative pt-16 bg-surface min-h-screen px-gutter pb-margin"><div class="flex flex-col w-full gap-space-lg">
+<!-- Interactive Feedback Toast (Floating) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-12 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl" id="toast-banner">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-message">Action completed successfully</span>
+</div>
+<!-- Top Hero Header & Quick Stats Cluster -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wide">Organizer Central</span>
+<span class="font-body-sm text-body-sm text-outline">• Active Term: Spring 2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Manage Campus Events &amp; Participation</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time management for college organizers. Switch status between Open &amp; Closed, view registrants, or export data instantly.</p>
+</div>
+<!-- Quick Action / Summary Pill -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all" onclick="exportFullSummaryCSV()" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Term Roster</span>
+</button>
+<button class="flex items-center gap-2 px-space-lg py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-md hover:bg-primary-container transition-all" onclick="showToast('Create Event dialog opened')" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>+ New Event</span>
+</button>
+</div>
+</div>
+<!-- Metric Badges Bento Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-outline">Total Hosted Events</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">6 <span class="font-body-sm text-body-sm text-outline font-normal">Active</span></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+2 vs last month</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">calendar_today</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-outline">Confirmed Registrations</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">714</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">89% Seat Utilization</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-outline">Open Venues</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">4 <span class="font-body-sm text-body-sm text-outline font-normal">Accepting</span></span>
+<span class="font-label-sm text-label-sm text-outline">2 fully booked</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[26px]">meeting_room</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-outline">Avg Attendance Rate</span>
+<span class="font-headline-lg text-headline-lg text-on-surface">94.2%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">+4.5% retention</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">how_to_reg</span>
+</div>
+</div>
+</div>
+<!-- Search & Filter Glassmorphic Bar -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<div class="relative flex-1 max-w-lg flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">search</span>
+<input class="w-full h-[42px] pl-10 pr-4 bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md rounded-xl focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm transition-all" id="event-search-input" onkeyup="filterEventsTable()" placeholder="Search by event title, venue, or category..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Status Filter -->
+<div class="flex items-center gap-1.5 bg-surface-container-low p-1 rounded-xl">
+<button class="status-filter-btn px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-xs transition-all" onclick="setFilterStatus('ALL', this)" type="button">All Statuses</button>
+<button class="status-filter-btn px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setFilterStatus('OPEN', this)" type="button">Open Only</button>
+<button class="status-filter-btn px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setFilterStatus('CLOSED', this)" type="button">Closed / Full</button>
+</div>
+<!-- Category Filter Dropdown -->
+<div class="relative">
+<select class="h-[40px] px-3.5 pr-8 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-xl appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary" id="category-filter" onchange="filterEventsTable()">
+<option value="ALL">All Categories</option>
+<option value="Tech">Tech &amp; Coding</option>
+<option value="Career">Career &amp; Fairs</option>
+<option value="Arts">Arts &amp; Media</option>
+<option value="Academic">Academic &amp; Research</option>
+<option value="Sports">Sports &amp; Athletics</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Events Management Main Table Container -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md flex items-center justify-between bg-surface-container-low/50">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Campus Event Rosters</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm" id="active-event-count">6 Events</span>
+</div>
+<div class="font-body-sm text-body-sm text-outline">Real-time status updates sync directly with the student portal</div>
+</div>
+<!-- Table of Events -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left" id="events-master-table">
+<thead>
+<tr class="bg-surface-container-low/80 text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md">Event Name &amp; Details</th>
+<th class="py-3 px-space-md">Date &amp; Venue</th>
+<th class="py-3 px-space-md">Capacity</th>
+<th class="py-3 px-space-md">Registered</th>
+<th class="py-3 px-space-md">Available Seats</th>
+<th class="py-3 px-space-md w-44">Utilization</th>
+<th class="py-3 px-space-md">Event Status</th>
+<th class="py-3 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface divide-y-0" id="events-table-body">
+<!-- Event Row 1 (Workshop - Active Selected for drawer) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" data-category="Tech" data-id="ev-1" data-status="OPEN" onclick="selectEventForDrawer('ev-1')">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Python &amp; AI Hands-on Workshop</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed-dim/40 text-on-secondary-fixed-variant font-label-sm text-label-sm">Tech</span>
+<span class="font-body-sm text-body-sm text-outline">ID: CS-2041</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Apr 18, 2025 • 2:00 PM</span>
+<span class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Turing Lab 104
+                </span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">50 Seats</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">
+<span class="event-reg-count">32</span> Students
+            </td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">18 Available</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>64%</span>
+<span>32/50</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 64%"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="toggleEventStatus('ev-1', this)" type="button">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="status-text font-semibold text-primary">Open</span>
+<span class="material-symbols-outlined text-[16px] text-outline ml-1">sync_alt</span>
+</button>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="inline-flex items-center gap-1">
+<button class="p-2 rounded-lg text-primary hover:bg-primary-fixed transition-colors" onclick="selectEventForDrawer('ev-1')" title="View Registrations" type="button">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="showToast('Edit modal loaded for CS-2041')" title="Edit Event" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Event Row 2 (Career Fair) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" data-category="Career" data-id="ev-2" data-status="OPEN" onclick="selectEventForDrawer('ev-2')">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">work</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Annual Spring Career Fair</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-primary-fixed-dim/40 text-on-primary-fixed-variant font-label-sm text-label-sm">Career</span>
+<span class="font-body-sm text-body-sm text-outline">ID: CR-5100</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Apr 22, 2025 • 10:00 AM</span>
+<span class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Grand Memorial Hall
+                </span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">350 Seats</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">
+<span class="event-reg-count">340</span> Students
+            </td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">10 Available</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>97%</span>
+<span>340/350</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 97%"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="toggleEventStatus('ev-2', this)" type="button">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="status-text font-semibold text-primary">Open</span>
+<span class="material-symbols-outlined text-[16px] text-outline ml-1">sync_alt</span>
+</button>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="inline-flex items-center gap-1">
+<button class="p-2 rounded-lg text-primary hover:bg-primary-fixed transition-colors" onclick="selectEventForDrawer('ev-2')" title="View Registrations" type="button">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="showToast('Edit modal loaded for CR-5100')" title="Edit Event" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Event Row 3 (Cybersecurity CTF - Full) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" data-category="Tech" data-id="ev-3" data-status="CLOSED" onclick="selectEventForDrawer('ev-3')">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Cybersecurity Capture The Flag</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed-dim/40 text-on-secondary-fixed-variant font-label-sm text-label-sm">Tech</span>
+<span class="font-body-sm text-body-sm text-outline">ID: CS-9088</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Apr 25, 2025 • 6:00 PM</span>
+<span class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Gates Cyber Wing B
+                </span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">80 Seats</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">
+<span class="event-reg-count">80</span> Students
+            </td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-error-container text-error font-label-sm text-label-sm font-semibold">0 Seats Left</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>100%</span>
+<span>80/80</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="toggleEventStatus('ev-3', this)" type="button">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="status-text font-semibold text-outline">Closed</span>
+<span class="material-symbols-outlined text-[16px] text-outline ml-1">sync_alt</span>
+</button>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="inline-flex items-center gap-1">
+<button class="p-2 rounded-lg text-primary hover:bg-primary-fixed transition-colors" onclick="selectEventForDrawer('ev-3')" title="View Registrations" type="button">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="showToast('Edit modal loaded for CS-9088')" title="Edit Event" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Event Row 4 (Campus TedX) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" data-category="Arts" data-id="ev-4" data-status="OPEN" onclick="selectEventForDrawer('ev-4')">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Campus TedX Leadership Series</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-tertiary-fixed-dim/40 text-on-tertiary-fixed-variant font-label-sm text-label-sm">Arts</span>
+<span class="font-body-sm text-body-sm text-outline">ID: TX-3012</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">May 02, 2025 • 4:30 PM</span>
+<span class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Dinkelspiel Auditorium
+                </span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">150 Seats</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">
+<span class="event-reg-count">112</span> Students
+            </td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">38 Available</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>75%</span>
+<span>112/150</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 75%"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="toggleEventStatus('ev-4', this)" type="button">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="status-text font-semibold text-primary">Open</span>
+<span class="material-symbols-outlined text-[16px] text-outline ml-1">sync_alt</span>
+</button>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="inline-flex items-center gap-1">
+<button class="p-2 rounded-lg text-primary hover:bg-primary-fixed transition-colors" onclick="selectEventForDrawer('ev-4')" title="View Registrations" type="button">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="showToast('Edit modal loaded for TX-3012')" title="Edit Event" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Event Row 5 (Alumni Dinner - Full) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" data-category="Career" data-id="ev-5" data-status="CLOSED" onclick="selectEventForDrawer('ev-5')">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Alumni Networking Dinner</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-primary-fixed-dim/40 text-on-primary-fixed-variant font-label-sm text-label-sm">Career</span>
+<span class="font-body-sm text-body-sm text-outline">ID: AL-8812</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">May 09, 2025 • 7:00 PM</span>
+<span class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Faculty Club Ballroom
+                </span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">100 Seats</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">
+<span class="event-reg-count">100</span> Students
+            </td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-error-container text-error font-label-sm text-label-sm font-semibold">0 Seats Left</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>100%</span>
+<span>100/100</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="toggleEventStatus('ev-5', this)" type="button">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="status-text font-semibold text-outline">Closed</span>
+<span class="material-symbols-outlined text-[16px] text-outline ml-1">sync_alt</span>
+</button>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="inline-flex items-center gap-1">
+<button class="p-2 rounded-lg text-primary hover:bg-primary-fixed transition-colors" onclick="selectEventForDrawer('ev-5')" title="View Registrations" type="button">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="showToast('Edit modal loaded for AL-8812')" title="Edit Event" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Event Row 6 (Design Systems Bootcamp) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group cursor-pointer" data-category="Tech" data-id="ev-6" data-status="OPEN" onclick="selectEventForDrawer('ev-6')">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Design Systems Bootcamp</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed-dim/40 text-on-secondary-fixed-variant font-label-sm text-label-sm">Tech</span>
+<span class="font-body-sm text-body-sm text-outline">ID: DS-1104</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">May 15, 2025 • 3:00 PM</span>
+<span class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Huang Engineering 018
+                </span>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">60 Seats</td>
+<td class="py-4 px-space-md whitespace-nowrap font-label-md text-label-md text-on-surface">
+<span class="event-reg-count">46</span> Students
+            </td>
+<td class="py-4 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">14 Available</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>76%</span>
+<span>46/60</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 76%"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" onclick="toggleEventStatus('ev-6', this)" type="button">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="status-text font-semibold text-primary">Open</span>
+<span class="material-symbols-outlined text-[16px] text-outline ml-1">sync_alt</span>
+</button>
+</td>
+<td class="py-4 px-space-md text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="inline-flex items-center gap-1">
+<button class="p-2 rounded-lg text-primary hover:bg-primary-fixed transition-colors" onclick="selectEventForDrawer('ev-6')" title="View Registrations" type="button">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="showToast('Edit modal loaded for DS-1104')" title="Edit Event" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer with Summary -->
+<div class="p-space-md bg-surface-container-low/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing <strong class="text-on-surface">6 of 6</strong> campus events • Click any row to inspect participants</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-xs opacity-50 cursor-not-allowed" type="button">Previous</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md" type="button">1</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-xs opacity-50 cursor-not-allowed" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Interactive Participants Inspection Drawer / Section -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-md p-space-lg flex flex-col gap-space-md transition-all duration-300" id="participant-section">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-sm border-b-0">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">badge</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface" id="selected-event-title">Python &amp; AI Hands-on Workshop</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold" id="selected-event-status-badge">Active Roster</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline" id="selected-event-meta">32 Students Confirmed • Turing Lab 104 • Apr 18, 2025</p>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px] pointer-events-none">search</span>
+<input class="h-[38px] pl-9 pr-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-xl focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" id="participant-search-input" onkeyup="filterParticipants()" placeholder="Search participants..." type="text"/>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container-low text-primary font-label-md text-label-md hover:bg-surface-container transition-all" onclick="exportParticipantsCSV()" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download CSV</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all" id="drawer-toggle-reg-btn" onclick="toggleActiveEventRegistration()" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span id="drawer-toggle-reg-label">Close Registration</span>
+</button>
+</div>
+</div>
+<!-- Participants Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left" id="participants-table">
+<thead>
+<tr class="bg-surface-container-low/60 text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md">Student Attendee</th>
+<th class="py-3 px-space-md">Student Email</th>
+<th class="py-3 px-space-md">Registered Event</th>
+<th class="py-3 px-space-md">Timestamp</th>
+<th class="py-3 px-space-md">Check-in Status</th>
+<th class="py-3 px-space-md text-right">Quick Check-in</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface" id="participants-tbody">
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary font-label-md text-label-md flex items-center justify-center font-bold">AR</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Alex Rivera</span>
+<span class="font-label-sm text-label-sm text-outline">ID: ST-9941</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant">a.rivera@campus.edu</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-label-sm text-label-sm text-outline" id="student-event-name-1">Python &amp; AI Workshop</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-outline">Apr 14, 2025 • 10:24 AM</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="checkin-badge inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Checked In
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors" onclick="toggleCheckin(this, 'Alex Rivera')" type="button">Revert</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-primary font-label-md text-label-md flex items-center justify-center font-bold">SC</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Sophia Chen</span>
+<span class="font-label-sm text-label-sm text-outline">ID: ST-8814</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant">s.chen@campus.edu</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-label-sm text-label-sm text-outline" id="student-event-name-2">Python &amp; AI Workshop</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-outline">Apr 14, 2025 • 11:05 AM</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="checkin-badge inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Registered
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="px-3 py-1 rounded-lg bg-primary-fixed text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors" onclick="toggleCheckin(this, 'Sophia Chen')" type="button">Check In</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-tertiary font-label-md text-label-md flex items-center justify-center font-bold">LJ</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Liam Johnson</span>
+<span class="font-label-sm text-label-sm text-outline">ID: ST-7102</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant">l.johnson@campus.edu</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-label-sm text-label-sm text-outline" id="student-event-name-3">Python &amp; AI Workshop</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-outline">Apr 14, 2025 • 01:15 PM</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="checkin-badge inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Registered
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="px-3 py-1 rounded-lg bg-primary-fixed text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors" onclick="toggleCheckin(this, 'Liam Johnson')" type="button">Check In</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary font-label-md text-label-md flex items-center justify-center font-bold">PP</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Priya Patel</span>
+<span class="font-label-sm text-label-sm text-outline">ID: ST-6239</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant">p.patel@campus.edu</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-label-sm text-label-sm text-outline" id="student-event-name-4">Python &amp; AI Workshop</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-outline">Apr 15, 2025 • 09:40 AM</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="checkin-badge inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Checked In
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors" onclick="toggleCheckin(this, 'Priya Patel')" type="button">Revert</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center font-bold">MB</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Marcus Brody</span>
+<span class="font-label-sm text-label-sm text-outline">ID: ST-5501</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-on-surface-variant">m.brody@campus.edu</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-label-sm text-label-sm text-outline" id="student-event-name-5">Python &amp; AI Workshop</td>
+<td class="py-3.5 px-space-md whitespace-nowrap font-body-sm text-body-sm text-outline">Apr 15, 2025 • 03:20 PM</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="checkin-badge inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Registered
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<button class="px-3 py-1 rounded-lg bg-primary-fixed text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors" onclick="toggleCheckin(this, 'Marcus Brody')" type="button">Check In</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Quick Check-in Counter Summary -->
+<div class="flex flex-wrap items-center justify-between pt-2">
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+<span>Current Page: <strong>5 of 32</strong> Attendees</span>
+<span class="text-outline">•</span>
+<span class="flex items-center gap-1 text-primary"><span class="w-2 h-2 rounded-full bg-primary"></span> 2 Checked In</span>
+<span class="text-outline">•</span>
+<span class="flex items-center gap-1 text-outline"><span class="w-2 h-2 rounded-full bg-outline"></span> 3 Pending Check-in</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#events-master-table">
+<span>Back to Top Table</span>
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+  let currentActiveStatusFilter = 'ALL';
+  let activeEventId = 'ev-1';
+
+  const eventMetadataMap = {
+    'ev-1': {
+      title: 'Python & AI Hands-on Workshop',
+      count: '32 Students Confirmed',
+      venue: 'Turing Lab 104 • Apr 18, 2025',
+      isOpen: true,
+      category: 'Tech'
+    },
+    'ev-2': {
+      title: 'Annual Spring Career Fair',
+      count: '340 Students Confirmed',
+      venue: 'Grand Memorial Hall • Apr 22, 2025',
+      isOpen: true,
+      category: 'Career'
+    },
+    'ev-3': {
+      title: 'Cybersecurity Capture The Flag',
+      count: '80 Students Confirmed (Waitlist Full)',
+      venue: 'Gates Cyber Wing B • Apr 25, 2025',
+      isOpen: false,
+      category: 'Tech'
+    },
+    'ev-4': {
+      title: 'Campus TedX Leadership Series',
+      count: '112 Students Confirmed',
+      venue: 'Dinkelspiel Auditorium • May 02, 2025',
+      isOpen: true,
+      category: 'Arts'
+    },
+    'ev-5': {
+      title: 'Alumni Networking Dinner',
+      count: '100 Students Confirmed',
+      venue: 'Faculty Club Ballroom • May 09, 2025',
+      isOpen: false,
+      category: 'Career'
+    },
+    'ev-6': {
+      title: 'Design Systems Bootcamp',
+      count: '46 Students Confirmed',
+      venue: 'Huang Engineering 018 • May 15, 2025',
+      isOpen: true,
+      category: 'Tech'
+    }
+  };
+
+  function showToast(message) {
+    const banner = document.getElementById('toast-banner');
+    const msg = document.getElementById('toast-message');
+    if (!banner || !msg) return;
+
+    msg.textContent = message;
+    banner.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-12');
+    banner.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      banner.classList.add('opacity-0', 'pointer-events-none', 'translate-y-12');
+      banner.classList.remove('opacity-100', 'translate-y-0');
+    }, 3200);
+  }
+
+  function setFilterStatus(status, element) {
+    currentActiveStatusFilter = status;
+    const buttons = document.querySelectorAll('.status-filter-btn');
+    buttons.forEach(btn => {
+      btn.className = 'status-filter-btn px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+    });
+    element.className = 'status-filter-btn px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-xs transition-all';
+    filterEventsTable();
+  }
+
+  function filterEventsTable() {
+    const searchVal = (document.getElementById('event-search-input')?.value || '').toLowerCase();
+    const categoryVal = document.getElementById('category-filter')?.value || 'ALL';
+    const rows = document.querySelectorAll('#events-table-body tr');
+
+    let visibleCount = 0;
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      const status = row.getAttribute('data-status');
+      const category = row.getAttribute('data-category');
+
+      const matchesSearch = text.includes(searchVal);
+      const matchesStatus = currentActiveStatusFilter === 'ALL' || status === currentActiveStatusFilter;
+      const matchesCategory = categoryVal === 'ALL' || category === categoryVal;
+
+      if (matchesSearch && matchesStatus && matchesCategory) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const countElem = document.getElementById('active-event-count');
+    if (countElem) {
+      countElem.textContent = visibleCount + ' Events';
+    }
+  }
+
+  function toggleEventStatus(eventId, btnElement) {
+    const row = document.querySelector(`tr[data-id="${eventId}"]`);
+    if (!row) return;
+
+    const currentStatus = row.getAttribute('data-status');
+    const isCurrentlyOpen = currentStatus === 'OPEN';
+    const nextStatus = isCurrentlyOpen ? 'CLOSED' : 'OPEN';
+
+    row.setAttribute('data-status', nextStatus);
+    const statusTextSpan = btnElement.querySelector('.status-text');
+    const dot = btnElement.querySelector('span:first-child');
+
+    if (nextStatus === 'OPEN') {
+      statusTextSpan.textContent = 'Open';
+      statusTextSpan.className = 'status-text font-semibold text-primary';
+      dot.className = 'w-2 h-2 rounded-full bg-primary animate-pulse';
+      showToast(`Event status updated to Open`);
+    } else {
+      statusTextSpan.textContent = 'Closed';
+      statusTextSpan.className = 'status-text font-semibold text-outline';
+      dot.className = 'w-2 h-2 rounded-full bg-outline';
+      showToast(`Event status updated to Closed`);
+    }
+
+    if (eventMetadataMap[eventId]) {
+      eventMetadataMap[eventId].isOpen = (nextStatus === 'OPEN');
+      if (activeEventId === eventId) {
+        updateDrawerDisplay(eventId);
+      }
+    }
+
+    filterEventsTable();
+  }
+
+  function selectEventForDrawer(eventId) {
+    activeEventId = eventId;
+    updateDrawerDisplay(eventId);
+    const targetSection = document.getElementById('participant-section');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  function updateDrawerDisplay(eventId) {
+    const meta = eventMetadataMap[eventId];
+    if (!meta) return;
+
+    const titleEl = document.getElementById('selected-event-title');
+    const metaEl = document.getElementById('selected-event-meta');
+    const toggleBtnLabel = document.getElementById('drawer-toggle-reg-label');
+    const statusBadge = document.getElementById('selected-event-status-badge');
+
+    if (titleEl) titleEl.textContent = meta.title;
+    if (metaEl) metaEl.textContent = `${meta.count} • ${meta.venue}`;
+
+    if (meta.isOpen) {
+      if (statusBadge) {
+        statusBadge.textContent = 'Open Registration';
+        statusBadge.className = 'px-2.5 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold';
+      }
+      if (toggleBtnLabel) toggleBtnLabel.textContent = 'Close Registration';
+    } else {
+      if (statusBadge) {
+        statusBadge.textContent = 'Registration Closed';
+        statusBadge.className = 'px-2.5 py-0.5 rounded-full bg-surface-container-high text-outline font-label-sm text-label-sm font-semibold';
+      }
+      if (toggleBtnLabel) toggleBtnLabel.textContent = 'Open Registration';
+    }
+
+    // Update table event labels
+    for (let i = 1; i <= 5; i++) {
+      const el = document.getElementById(`student-event-name-${i}`);
+      if (el) el.textContent = meta.title;
+    }
+  }
+
+  function toggleActiveEventRegistration() {
+    const meta = eventMetadataMap[activeEventId];
+    if (!meta) return;
+
+    const row = document.querySelector(`tr[data-id="${activeEventId}"]`);
+    const rowBtn = row ? row.querySelector('button[onclick*="toggleEventStatus"]') : null;
+
+    if (rowBtn) {
+      toggleEventStatus(activeEventId, rowBtn);
+    }
+  }
+
+  function toggleCheckin(btn, studentName) {
+    const row = btn.closest('tr');
+    const badge = row.querySelector('.checkin-badge');
+    const isCurrentlyChecked = badge.textContent.includes('Checked In');
+
+    if (isCurrentlyChecked) {
+      badge.className = 'checkin-badge inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm';
+      badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Registered';
+      btn.textContent = 'Check In';
+      btn.className = 'px-3 py-1 rounded-lg bg-primary-fixed text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors';
+      showToast(`${studentName} checked-in status reverted to Registered`);
+    } else {
+      badge.className = 'checkin-badge inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold';
+      badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Checked In';
+      btn.textContent = 'Revert';
+      btn.className = 'px-3 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors';
+      showToast(`${studentName} successfully Checked In!`);
+    }
+  }
+
+  function filterParticipants() {
+    const term = (document.getElementById('participant-search-input')?.value || '').toLowerCase();
+    const rows = document.querySelectorAll('#participants-tbody tr');
+
+    rows.forEach(r => {
+      const text = r.textContent.toLowerCase();
+      r.style.display = text.includes(term) ? '' : 'none';
+    });
+  }
+
+  function exportParticipantsCSV() {
+    const meta = eventMetadataMap[activeEventId] || { title: 'Event' };
+    showToast(`32 Participants exported to CSV for ${meta.title}`);
+  }
+
+  function exportFullSummaryCSV() {
+    showToast(`Master term roster exported to CSV (6 events, 714 students)`);
+  }
+</script></main></div><script>const orgBtn = document.getElementById('role-btn-organizer'); const stuBtn = document.getElementById('role-btn-student'); const orgNav = document.getElementById('organizer-nav'); const stuNav = document.getElementById('student-nav'); const sectionLabel = document.getElementById('nav-section-label'); const roleSubtitle = document.getElementById('user-role-subtitle'); if (orgBtn && stuBtn && orgNav && stuNav) { orgBtn.addEventListener('click', () => { orgBtn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-[0_2px_4px_rgba(15,23,42,0.06)] transition-all'; stuBtn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all'; orgNav.classList.remove('hidden'); orgNav.classList.add('flex'); stuNav.classList.add('hidden'); stuNav.classList.remove('flex'); if(sectionLabel) sectionLabel.textContent = 'Organizer Controls'; if(roleSubtitle) roleSubtitle.textContent = 'Campus Club Lead'; }); stuBtn.addEventListener('click', () => { stuBtn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-[0_2px_4px_rgba(15,23,42,0.06)] transition-all'; orgBtn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all'; stuNav.classList.remove('hidden'); stuNav.classList.add('flex'); orgNav.classList.add('hidden'); orgNav.classList.remove('flex'); if(sectionLabel) sectionLabel.textContent = 'Student Navigation'; if(roleSubtitle) roleSubtitle.textContent = "Computer Science '26"; }); }</script></body></html>
