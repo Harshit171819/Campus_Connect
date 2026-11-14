@@ -1,5 +1,16 @@
 # Campus Connect frontend
 
+## Deploy to Vercel
+
+1. Import the GitHub repository `Harshit171819/Campus_Connect` into Vercel.
+2. Set **Root Directory** to `frontend` and **Framework Preset** to `Other`.
+3. Use **Build Command** `npm run build` and **Output Directory** `dist`.
+4. Add **BACKEND_URL** with the deployed Render HTTPS origin, for example `https://your-backend.onrender.com` (no `/api`). Enable it for Production and Preview.
+5. Deploy. The Node server is only used locally; Vercel serves `dist` and uses `api/proxy.js` for backend requests.
+6. After deployment, visit `/api/events` on the Vercel domain. It should return JSON from Render.
+
+Supabase configuration stays on Render. The Vercel frontend does not need Supabase keys. Changes to BACKEND_URL require redeploying the Vercel project.
+
 A standalone frontend based on the four screens in your Stitch ZIP. Built with HTML, CSS, and JavaScript; no package installation required. Node.js 20+ is needed for the local server.
 
 ## Run
