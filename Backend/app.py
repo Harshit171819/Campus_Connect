@@ -4,7 +4,6 @@ import time
 from threading import RLock
 from functools import wraps
 from uuid import UUID, uuid4
-from datetime import datetime, timezone
 
 from flask import Flask, g, jsonify, request
 from supabase import create_client, ClientOptions
@@ -105,8 +104,6 @@ def connection_error(error):
 
 @app.errorhandler(APIError)
 def database_error(error):
-    if error.code in ('42703', 'PGRST204') and 'starts_at' in str(error):
-        return jsonify(error='Event dates need the database migration. Run Backend/migrations/001_event_dates.sql in Supabase SQL Editor.'), 503
     if error.code == '23505':
         if request.endpoint == 'create_user':
             return jsonify(error='A user with this email already exists.'), 409
@@ -226,18 +223,6 @@ def organizer_events():
     return jsonify(events=rows, limit=limit, offset=offset)
 
 
-def parse_event_date(value):
-    if not isinstance(value, str):
-        raise ValueError('An event date and time are required.')
-    try:
-        date = datetime.fromisoformat(value.replace('Z', '+00:00'))
-    except ValueError:
-        raise ValueError('Enter a valid event date and time.') from None
-    if date.tzinfo is None:
-        raise ValueError('Event date must include a timezone.')
-    return date.astimezone(timezone.utc).isoformat()
-
-
 @app.get('/api/events/<uuid:event_id>')
 def event_details(event_id):
     event = find_event(event_id)
@@ -264,11 +249,6 @@ def create_event():
         'id': str(uuid4()), 'organizer_id': g.user_id,
         'title': title.strip(), 'capacity': capacity, 'status': 'upcoming',
     }
-    if 'starts_at' in body:
-        try:
-            event['starts_at'] = parse_event_date(body['starts_at'])
-        except ValueError as error:
-            return jsonify(error=str(error)), 400
     rows = get_db().table('events').insert(event).execute().data
     invalidate_cache()
     return jsonify(event=rows[0]), 201
@@ -285,18 +265,13 @@ def update_event(event_id):
     if str(event['organizer_id']) != g.user_id:
         return jsonify(error='Only the owning organizer can update this event.'), 403
     body = request.get_json(silent=True)
-    if not isinstance(body, dict) or not body or set(body) - {'status', 'starts_at'}:
-        return jsonify(error='Provide status and/or starts_at.'), 400
+    if not isinstance(body, dict) or not body or set(body) - {'status'}:
+        return jsonify(error='Provide status to open or close the event.'), 400
     updates = {}
     if 'status' in body:
         if body['status'] not in ('upcoming', 'closed'):
             return jsonify(error='Status must be upcoming (open) or closed.'), 400
         updates['status'] = body['status']
-    if 'starts_at' in body:
-        try:
-            updates['starts_at'] = parse_event_date(body['starts_at'])
-        except ValueError as error:
-            return jsonify(error=str(error)), 400
     rows = get_db().table('events').update(updates).eq('id', str(event_id)).eq('organizer_id', g.user_id).execute().data
     if not rows:
         return jsonify(error='Event could not be updated.'), 409

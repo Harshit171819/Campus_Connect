@@ -13,9 +13,9 @@ Campus event discovery and organizer management with a Flask/Supabase backend an
 
 This prototype uses a Student/Organizer role switch and existing records in `public.users`; authentication is disabled by default. See the Backend and frontend READMEs for database requirements and API details.
 
-## Database date migration
+## Database setup
 
-Event scheduling requires `Backend/migrations/001_event_dates.sql` to be applied in Supabase SQL Editor. The existing database does not have the `starts_at` column until this migration is applied. Do not run the initial `Backend/schema.sql` over an existing database.
+Use the existing Supabase database. Do not run the initial `Backend/schema.sql` over existing tables. Event creation requires a title and capacity; organizers can open and close their events.
 
 ## Project folders
 

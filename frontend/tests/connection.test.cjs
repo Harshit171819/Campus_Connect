@@ -54,16 +54,17 @@ test('organizer form has title and capacity fields',()=>{
  vm.runInContext("state.mode='organizer';state.user={id:'o1'};state.users=[{id:'o1',email:'organizer@example.com'}];createEventPage()",context);
  assert.match(element('#page').innerHTML,/name="title"/);
  assert.match(element('#page').innerHTML,/name="capacity"/);
+ assert.doesNotMatch(element('#page').innerHTML,/datetime-local|name="starts_at"/);
  assert.match(element('#page').innerHTML,/organizer@example.com/);
 });
 test('creation submits to backend with the selected organizer',async()=>{
  let captured;const {context}=setup(async(path,options)=>{captured={path,options};return response({event:{id:'new-event'}})});
  const button={disabled:false,textContent:''};const error={textContent:''};
- context.event={preventDefault(){},currentTarget:{values:{title:'  Coding Workshop  ',capacity:'30',starts_at:'2027-01-01T10:00'},querySelector(selector){return selector==='.form-error'?error:button}}};
+ context.event={preventDefault(){},currentTarget:{values:{title:'  Coding Workshop  ',capacity:'30'},querySelector(selector){return selector==='.form-error'?error:button}}};
  await vm.runInContext("state.mode='organizer';state.user={id:'owner'};submitEvent(event)",context);
  assert.equal(captured.path,'/api/events');assert.equal(captured.options.method,'POST');
  assert.equal(captured.options.headers['X-User-Id'],'owner');
- assert.deepEqual(JSON.parse(captured.options.body),{title:'Coding Workshop',capacity:30,starts_at:new Date('2027-01-01T10:00').toISOString()});
+ assert.deepEqual(JSON.parse(captured.options.body),{title:'Coding Workshop',capacity:30});
  assert.equal(context.location.hash,'manage');assert.equal(button.disabled,false);
 });
 
